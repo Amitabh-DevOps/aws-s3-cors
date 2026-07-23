@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Webpage</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>I REALLY love coffee</h1>
+        <p>Hello world!</p>
+
+        <img src="coffee.jpg" width="500"/>
+
+        <!-- CORS demo -->
+        <div id="tofetch"></div>
+        <script>
+            var tofetch = document.getElementById("tofetch");
+
+            fetch('http://s3-cross-origin-other-bucket-981526069311-eu-west-1-an.s3-website-eu-west-1.amazonaws.com/extra-page.html')
+            .then((response) => { 
+                return response.text();
+            })
+            .then((html) => {
+                tofetch.innerHTML = html     
+            });
+        </script>
+    </body>
+</html>

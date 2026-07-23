@@ -1,0 +1,48 @@
+/* extra-styles.css — for extra-page.html (Bucket 2 Resource) */
+
+.cors-banner {
+  margin-top: 25px;
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  border: 2px solid #38bdf8;
+  max-width: 500px;
+}
+
+.cors-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cors-badge {
+  background: #ffffff;
+  color: #0284c7;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cors-source {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.cors-banner h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+}
+
+.cors-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
