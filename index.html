@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>AWS Cloud Demo</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>☁️ Exploring AWS S3</h1>
-        <p>Static websites hosted on Amazon S3 — simple, scalable, and serverless.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS S3 — Static Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
 
-        <img src="coffee.jpg" width="500" alt="A warm cup of coffee" />
+        <!-- Hero Section -->
+        <div class="hero">
+            <span class="tag">AWS S3 · Static Web Hosting</span>
+            <h1>Hello from<br>Amazon S3 ☁️</h1>
+            <p class="lead">
+                This page is hosted entirely on <strong>AWS S3</strong> as a static website — no servers, no backend.
+                Below, it dynamically loads content from another origin using a <code>fetch()</code> request.
+            </p>
+        </div>
 
-        <!-- CORS demo: fetches content from a different S3 bucket origin -->
+        <!-- Image -->
+        <img class="hero-image" src="coffee.jpg" alt="Coffee" />
+
+        <hr class="divider">
+
+        <!-- Loaded Content Area -->
+        <p class="section-label">Content loaded via fetch()</p>
         <div id="tofetch"></div>
-        <script>
-            var tofetch = document.getElementById("tofetch");
 
-            fetch('extra-page.html')
-            .then((response) => {
-                return response.text();
-            })
-            .then((html) => {
-                tofetch.innerHTML = html;
-            });
-        </script>
-    </body>
+    </div>
+
+    <script>
+        var tofetch = document.getElementById("tofetch");
+
+        fetch('extra-page.html')
+        .then((response) => {
+            return response.text();
+        })
+        .then((html) => {
+            tofetch.innerHTML = html;
+        });
+    </script>
+</body>
 </html>

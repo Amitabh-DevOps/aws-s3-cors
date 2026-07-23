@@ -1,48 +1,56 @@
-/* extra-styles.css — for extra-page.html (Bucket 2 Resource) */
+/* =============================================
+   extra-styles.css — Bucket 2 Resource (extra-page.html)
+   ============================================= */
 
-.cors-banner {
-  margin-top: 25px;
-  padding: 20px 25px;
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.3);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  border: 2px solid #38bdf8;
-  max-width: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.extra-card {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2540 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 660px;
 }
 
-.cors-banner-header {
+.extra-card-header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-.cors-badge {
-  background: #ffffff;
-  color: #0284c7;
-  font-weight: 800;
-  font-size: 0.75rem;
+.extra-badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-.cors-source {
-  font-size: 0.85rem;
-  opacity: 0.9;
+.extra-origin {
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
-.cors-banner h2 {
-  margin: 0 0 8px 0;
-  font-size: 1.3rem;
+.extra-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f0f9ff;
+  margin-bottom: 8px;
 }
 
-.cors-banner p {
-  margin: 0;
-  font-size: 0.95rem;
-  opacity: 0.95;
-  line-height: 1.5;
+.extra-card p {
+  font-size: 0.9rem;
+  color: #bae6fd;
+  line-height: 1.65;
+}
+
+.extra-card strong {
+  color: #e0f2fe;
 }

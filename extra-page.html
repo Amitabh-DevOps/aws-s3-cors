@@ -1,11 +1,14 @@
-<!-- Cross-origin content loaded from Bucket 2 -->
+<!-- Content loaded from Bucket 2 via cross-origin fetch -->
 <link rel="stylesheet" href="extra-styles.css">
 
-<div class="cors-banner">
-    <div class="cors-banner-header">
-        <span class="cors-badge">Cross-Origin Access</span>
-        <span class="cors-source">Source: Bucket 2</span>
+<div class="extra-card">
+    <div class="extra-card-header">
+        <span class="extra-badge">Cross-Origin</span>
+        <span class="extra-origin">Served from Bucket 2</span>
     </div>
-    <h2>✅ Data Fetched from a Different S3 Bucket!</h2>
-    <p>This content lives in <strong>Bucket 2</strong> and was successfully loaded by <strong>Bucket 1</strong> — made possible by the S3 CORS configuration.</p>
+    <h2>🎉 Content Loaded Successfully!</h2>
+    <p>
+        This section was fetched from a <strong>different S3 bucket</strong>.
+        Cross-origin access was granted because CORS is correctly configured on the source bucket.
+    </p>
 </div>
