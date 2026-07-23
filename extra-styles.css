@@ -1,56 +1,138 @@
-/* =============================================
-   extra-styles.css — Bucket 2 Resource (extra-page.html)
-   ============================================= */
+/* ===================================================
+   extra-styles.css — extra-page.html (Bucket 2)
+   =================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-.extra-card {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #1e3a5f 0%, #0f2540 100%);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 14px;
-  padding: 24px 28px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  max-width: 660px;
+.xcard {
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 30px 30px 26px;
+  background: #0b1e35;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.06) inset,
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(56, 189, 248, 0.05);
 }
 
-.extra-card-header {
+/* Animated top glow line */
+.xcard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #7dd3fc, transparent);
+  animation: shimmer 3s infinite linear;
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Success glow orb (decorative) */
+.xcard::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Top row: badge + origin */
+.xcard-header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
-.extra-badge {
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.7px;
+.xbadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 20px;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  padding: 4px 10px 4px 8px;
+  border-radius: 100px;
 }
 
-.extra-origin {
-  font-size: 0.8rem;
-  color: #94a3b8;
+.xbadge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
+  animation: blink 1.8s infinite ease-in-out;
 }
 
-.extra-card h2 {
-  font-size: 1.2rem;
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.xorigin {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: rgba(148, 163, 184, 0.7);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+/* Title */
+.xcard h2 {
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #f0f9ff;
-  margin-bottom: 8px;
-}
-
-.extra-card p {
-  font-size: 0.9rem;
-  color: #bae6fd;
-  line-height: 1.65;
-}
-
-.extra-card strong {
   color: #e0f2fe;
+  letter-spacing: -0.3px;
+  margin-bottom: 10px;
+  line-height: 1.3;
 }
+
+/* Body text */
+.xcard p {
+  font-size: 0.88rem;
+  color: #7dd3fc;
+  line-height: 1.7;
+}
+
+.xcard p strong {
+  color: #bae6fd;
+  font-weight: 600;
+}
+
+/* Bottom meta row */
+.xcard-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.xmeta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #475569;
+}
+
+.xmeta-sep { color: #1e3a5f; }

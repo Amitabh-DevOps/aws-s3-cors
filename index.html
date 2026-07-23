@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS S3 — Static Website</title>
+    <title>S3 Static Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="wrapper">
 
-        <!-- Hero Section -->
-        <div class="hero">
-            <span class="tag">AWS S3 · Static Web Hosting</span>
-            <h1>Hello from<br>Amazon S3 ☁️</h1>
-            <p class="lead">
-                This page is hosted entirely on <strong>AWS S3</strong> as a static website — no servers, no backend.
-                Below, it dynamically loads content from another origin using a <code>fetch()</code> request.
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                <span class="dot"></span>
+                S3 Static Website
+            </div>
+            <span class="nav-chip">Bucket&nbsp;1</span>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <p class="hero-eyebrow">AWS · Amazon S3 · Static Web Hosting</p>
+            <h1>Serving the web<br>from <em>the cloud</em>.</h1>
+            <p class="hero-desc">
+                This page is hosted on <strong>Amazon S3</strong> with static website hosting enabled.
+                It dynamically loads content from another S3 bucket via a JavaScript <code>fetch()</code> call —
+                demonstrating how cross-origin requests work between two different bucket origins.
             </p>
-        </div>
+        </section>
 
         <!-- Image -->
-        <img class="hero-image" src="coffee.jpg" alt="Coffee" />
+        <div class="photo-frame">
+            <img src="coffee.jpg" alt="Coffee" />
+            <div class="photo-frame-overlay"></div>
+            <span class="photo-caption">☕ Fuel for cloud engineers</span>
+        </div>
 
-        <hr class="divider">
+        <!-- Separator -->
+        <div class="sep">
+            <div class="sep-line"></div>
+            <span class="sep-label">Content loaded via fetch()</span>
+            <div class="sep-line"></div>
+        </div>
 
-        <!-- Loaded Content Area -->
-        <p class="section-label">Content loaded via fetch()</p>
-        <div id="tofetch"></div>
+        <!-- Zone where extra-page.html is injected -->
+        <div class="fetch-zone" id="tofetch">
+            <p class="fetch-placeholder">// waiting for cross-origin response...</p>
+        </div>
 
     </div>
 
