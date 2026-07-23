@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>My First Webpage</title>
+        <title>AWS Cloud Demo</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>I REALLY love coffee</h1>
-        <p>Hello world!</p>
+        <h1>☁️ Exploring AWS S3</h1>
+        <p>Static websites hosted on Amazon S3 — simple, scalable, and serverless.</p>
 
-        <img src="coffee.jpg" width="500"/>
+        <img src="coffee.jpg" width="500" alt="A warm cup of coffee" />
 
-        <!-- CORS demo -->
+        <!-- CORS demo: fetches content from a different S3 bucket origin -->
         <div id="tofetch"></div>
         <script>
             var tofetch = document.getElementById("tofetch");
 
-            fetch('http://s3-cross-origin-other-bucket-981526069311-eu-west-1-an.s3-website-eu-west-1.amazonaws.com/extra-page.html')
-            .then((response) => { 
+            fetch('extra-page.html')
+            .then((response) => {
                 return response.text();
             })
             .then((html) => {
-                tofetch.innerHTML = html     
+                tofetch.innerHTML = html;
             });
         </script>
     </body>
