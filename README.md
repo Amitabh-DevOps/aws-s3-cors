@@ -2,7 +2,7 @@
 
 Step-by-step practical guide to demonstrate AWS S3 Cross-Origin Resource Sharing (CORS) using two S3 buckets with Static Web Hosting enabled.
 
-[![Deploy to Zerops](http://localhost:3000/badge)](http://localhost:3000/deploy?repo=Amitabh-DevOps%2Faws-s3-cors)
+[![Deploy to Zerops](http://localhost:3000/badge)](http://localhost:3000/deploy?repo=Amitabh-DevOps/aws-s3-cors)
 
 
 ---
