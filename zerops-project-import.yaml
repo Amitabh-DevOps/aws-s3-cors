@@ -1,7 +1,0 @@
-project:
-  name: my-awesome-app
-  
-services:
-  - hostname: app
-    type: nodejs@22
-    buildFromGit: https://github.com/Amitabh-DevOps/aws-s3-cors
